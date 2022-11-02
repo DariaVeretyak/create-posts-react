@@ -1,0 +1,119 @@
+.NewPost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 55vw;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+  }
+
+  &__input {
+    position: relative;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(77, 69, 123, 0.7);
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    color: #4d457b;
+    background-color: transparent;
+    width: 100%;
+    transition: all 0.4s ease;
+    box-shadow: 1px 4px 8px transparent;
+
+    &:hover {
+      box-shadow: 1px 4px 8px rgba(77, 69, 123, 0.7);
+      border-radius: 4px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid rgba(77, 69, 123, 0.7);
+    }
+
+    &--textarea {
+      border: 1px solid rgba(77, 69, 123, 0.7);
+      border-radius: 4px;
+      resize: none;
+
+      &:hover {
+        border: 1px solid rgba(77, 69, 123, 0.7);
+      }
+    }
+
+    &::placeholder {
+      color: #4d457b;
+      opacity: 0.7;
+    }
+  }
+
+  &__imgLabel {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 10px 5px;
+    color: #4d457b;
+    opacity: 0.7;
+    z-index: 1;
+  }
+
+  &__submit-button {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 0;
+    margin-top: 10px;
+    width: 50%;
+    height: max-content;
+    background-color: #4d457b;
+    opacity: 0.7;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #e9e6f2;
+    font-size: 16px;
+    align-self: flex-start;
+    text-transform: uppercase;
+    padding: 6px;
+    cursor: pointer;
+    box-shadow: 1px 4px 16px transparent;
+    transition: all 0.4s ease;
+
+    &:hover {
+      box-shadow: 1px 4px 16px rgba(77, 69, 123, 0.7);
+    }
+
+    &:disabled {
+      background-color: red;
+      opacity: 0.5;
+
+      &:hover {
+        box-shadow: 1px 4px 16px transparent;
+      }
+    }
+  }
+
+  &__errorBlock {
+    align-self: flex-end;
+    font-size: 12px;
+    color: red;
+    opacity: 0.5;
+  }
+
+  &__uploadLabel {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    color: #4d457b;
+    opacity: 0.7;
+  }
+
+  &__uploadInput {
+    display: none;
+  }
+}
