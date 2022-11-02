@@ -21,8 +21,9 @@
     color: #4d457b;
     background-color: transparent;
     width: 100%;
+    height: max-content;
     transition: all 0.4s ease;
-    box-shadow: 1px 4px 8px transparent;
+    // box-shadow: 1px 4px 8px transparent;
 
     &:hover {
       box-shadow: 1px 4px 8px rgba(77, 69, 123, 0.7);
@@ -64,9 +65,10 @@
   &__submit-button {
     display: flex;
     justify-content: center;
+    align-self: flex-start;
     gap: 5px;
-    margin: 0;
-    margin-top: 10px;
+    margin: 10px 0 0;
+    padding: 6px;
     width: 50%;
     height: max-content;
     background-color: #4d457b;
@@ -76,11 +78,7 @@
     border-radius: 4px;
     color: #e9e6f2;
     font-size: 16px;
-    align-self: flex-start;
     text-transform: uppercase;
-    padding: 6px;
-    cursor: pointer;
-    box-shadow: 1px 4px 16px transparent;
     transition: all 0.4s ease;
 
     &:hover {

@@ -30,6 +30,10 @@ ul {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .App {
   &__top {
     display: flex;
